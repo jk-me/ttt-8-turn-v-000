@@ -7,7 +7,7 @@ def display_board(board)
 end
 
 def position_taken?(board, i)
-  if board[i]=='' or board[i]=='' or board[i]==NIL
+  if board[i]=='' or board[i]==' ' or board[i]==NIL
     return FALSE
   else
     return TRUE
