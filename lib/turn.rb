@@ -31,11 +31,10 @@ def turn(board)
   x=gets.strip
   index=(x.to_i)-1
   if valid_move?(board,index)
-    puts'hi'
     move(board,index)
     display_board(board)
   else
-    puts 'nope'
+    turn(board)
   end
 end
 
