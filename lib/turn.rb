@@ -26,10 +26,14 @@ def move(board, i,val='X')
     board[i]=val
 end
 
-def turn(board)
-  puts'Please enter 1-9'
-  x=gets.strip
+def input_to_index(x)
   index=(x.to_i)-1
+end
+
+def turn(board)
+  puts'Please enter 1-9:'
+  x=gets.strip
+  index=input_to_index(x)
   if valid_move?(board,index)
     move(board,index)
     display_board(board)
